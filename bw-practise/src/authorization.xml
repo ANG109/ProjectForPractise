@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE auth_data [
+  <!ELEMENT auth_data (auth_strict,auth_obs)> 
+  <!ELEMENT auth_strict (param+)>
+  <!ELEMENT auth_obs    (param+)>
+  <!ATTLIST param name CDATA #REQUIRED value (1|0) "0">
+]>
+<!-- 权限根目录 -->
+<auth_data>
+	<!-- 严格匹配 -->
+	<auth_strict>
+		<param name="loginUI" value="0" />
+		<param name="register" value="0"/>
+		<param name="dataUsed" value="0"/>
+		<param name="veriCode" value="0"/>
+	</auth_strict>
+	<!-- 模糊匹配，action名字符合actionName_*.action  -->
+	<auth_obs>
+		<param name="user" value="0" />
+	</auth_obs>
+</auth_data>

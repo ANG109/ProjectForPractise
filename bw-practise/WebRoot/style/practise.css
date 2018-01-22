@@ -1,0 +1,9 @@
+/*
+id为para1的样式*/
+#para1 {text-align:center;color:red;}
+/*
+class选择器*/
+.para2 {text-align:end;}
+/*
+标签元素选择器,P中的class*/
+p.para3 {text-align:center;background-image: url('paper.jpg');background-repeat:repeat-x;background-color: #0b0b0b;}

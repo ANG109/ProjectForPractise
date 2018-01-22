@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="bw-practise:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/bw_practise_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="dir-copy" path="C:/Program Files/apache-tomcat-8.5.11-windows-x64" />
+          <element id="library" level="project" name="bw-practise" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="aopalliance-1.0" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="bw-practise/web/Web" />
+    </root>
+  </artifact>
+</component>

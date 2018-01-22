@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JISUANQI.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <a href="www.baidu.com">baidu</a>
+  <div id="chart">
+     <ul>
+         <li id="li1" onmouseover="showDiv(1);">innerNews</li>
+         <li id="li2" onmouseover="showDiv(2);">2</li>
+         <li id="li3" onmouseover="showDiv(3);">3</li>c
+         <li id="li4" onmouseover="showDiv(4);">4</li>
+     </ul>
+  </div>
+  <div id="div1" style="display:block">内容1</div>
+  <div id="div2" style="display:none"></div>
+  <div id="div3" style="display:none"></div>
+  <div id="div4" style="display:none"></div>
+  
+  <style type="text/css">
+     #d1{
+         border:
+     }
+  </style>
+  <input type="text" id="text1" />
+  +
+  <input type="text"  id="text2"/>
+  <body>
+  <div>
+  <input id="d1" src="" onmouseover="stop();" onmouseout="start();"> 
+  <input type="button" value="1" id="d2"/>
+    This is my HTML page. <br>
+  <ul id="imgStop" >
+     <li id="li1" value="1" onmouseover="imgStop(1,this);" onmouseout="imgStart(this);">1</li>
+      <li id="li2" value="2" onmouseover="imgStop(2,this);" onmouseout="imgStart(this);">2</li>
+       <li id="li3" value="3" onmouseover="imgStop(3,this);" onmouseout="imgStart(this);">3</li>
+        <li id="li4" value="4" onmouseover="imgStop(4,this);" onmouseout="imgStart(this);">4</li>
+         <li id="li5" value="5" onmouseover="imgStop(5,this);" onmouseout="imgStart(this);">5</li>
+          <li id="li6" value="6" onmouseover="imgStop(6,this);" onmouseout="imgStart(this);">6</li>
+  </ul>  
+  </div>
+  <input type="button" onclick="tiaozhuan" value="点击跳转">
+    <script type="text/javascript">
+        document.body.appendChild(对象);
+    
+    window.onload = init;
+    
+    var time;
+    function init(){
+        time = window.setInterval(timeStart(), 3000)
+    
+    }
+    function timeStart() {
+        
+            var obj = document.getElementById("d1");
+        	obj.src = "地址";
+        }
+    function stop(){
+        window.clearInterval(time);
+    }
+    function start(){
+        this.init();
+        
+    }
+    
+    function imgStop(n){
+        var i = n.value;
+        var m = n.innerHTML;
+        window.clearInterval(time);
+        var obj = document.getElementById("d1");
+        obj.src = "dd"+i+".jpg";
+        for(var j=1;j<=i ;j++){
+            var obj = document.getElementById("1i"+j);
+            obj.style.background="white";
+        }
+        n.style.background = "orange";
+    }
+    function imgStart(){
+        n.style.background = "white";
+    }
+    function showDiv(n){
+        for(var i=0; i<=4;i++){
+           var obj = document.getElementById("div"+n);
+           obj.style.display="none";
+        }
+        var obj = document.getElementById("div"+n);
+        obj.style.display="block";
+    }
+    
+    function fun(){
+        var obj = document.getElementByTagName("div");
+        obj[0].style.display="none";
+    }
+    function tiaozhuan(){
+        location.href="history.back.html";
+        history.back();
+    
+    }
+    </script>
+  </body>
+</html>

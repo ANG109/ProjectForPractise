@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>BW</title>
+    #parse("common/linkFile.html")
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+	<link rel="stylesheet" type="text/css" href="${style_url}/style_log.css"></link>
+	<link rel="stylesheet" type="text/css" href="$!{style_url}/style2.css"></link>
+	<link rel="stylesheet" type="text/css" href="$!{style_url}/iot-style.css"></link>
+	<link rel="stylesheet" type="text/css" href="$!{style_url}/userpanel.css"></link>
+	<link rel="stylesheet" type="text/css" href="$!{style_url}/jquery.ui.all.css"></link>
+</head>
+<body class="login">
+<div class="login_m">
+		<div class="login_logo"> 
+     		<img src="$!{images_url}/logo.png" width="196" height="46"/>
+	    </div>
+		<div class="login_boder">
+		<form action="register.do" method="post">
+			<div class="login_padding" id="login_model">
+				  <h2>USERNAME</h2>
+					  <label>
+					   		 <input type="text" id="phone" name="phone" class="txt_input txt_input2" />
+					  </label>
+				  <h2>PASSWORD</h2>
+				  <label>
+				   		 <input type="password" name="password" id="userpwd" class="txt_input" />
+				  </label>
+				  <div class="loginInput">
+	              		<div class="fsyzm">
+	                      	<img src="veriCode.do" onclick="this.src='$!{server_url}/veriCode.do?d='+Math.random();" id="veriCode"/>
+	                    </div>
+	              		<input class="easyui-textbox" name="user_code" style="padding:12px;" data-options="prompt:'输入验证码',iconCls:'icon-code',iconWidth:40,iconAlign:'right',required:true">
+	              	</div>
+				  <p class="forgot">
+				  		<a id="iforget" href="javascript:void(0);">Forgot your password?</a>
+				  </p>
+		     <div class="rem_sub">
+		  		<div class="rem_sub_l">
+			 	    <input type="checkbox" name="checkbox" id="save_me"/>
+			   		<label class="checkbox">Remember me</label>
+		   		</div> 
+		       		<input type="submit" class="sub_button" name="button" id="button" value="SIGN-IN" />
+	            </div>
+	         </div>
+	   </form>
+	</div>
+</div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

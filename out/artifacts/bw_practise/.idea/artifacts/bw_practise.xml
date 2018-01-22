@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="bw-practise">
+    <output-path>$PROJECT_DIR$/out/artifacts/bw_practise</output-path>
+    <root id="root">
+      <element id="library" level="project" name="aopalliance-1.0" />
+      <element id="library" level="project" name="bw-practise" />
+    </root>
+  </artifact>
+</component>

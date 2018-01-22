@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Apr 19 23:01:46 CST 2017
+dubbo-2.5.3.pom>central=
+dubbo-2.5.3.pom>nexus-public=
+dubbo-2.5.3.jar>nexus-public=

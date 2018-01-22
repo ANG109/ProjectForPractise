@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" /> 
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<title>账户预览</title>
+	<link rel="stylesheet" href="$!{style_url}/bootstrap.min.css" />
+    <link rel="stylesheet" href="$!{style_url}/bootstrapValidator.min.css" />
+	<link rel="stylesheet" href="$!{style_url}/bootstrap-slider.min.css" />
+	<link rel="stylesheet" href="$!{style_url}/components.min.css" />
+	<link rel="stylesheet" href="$!{style_url}/style.css" />  
+</head>
+<body id="allBody">
+    <div id="wrapper">
+        <!-- AccountPreviewContent start -->
+        <div id="page-wrapper" style="margin-left: 10px;margin-right: 10px;">
+            <div class="portlet-title queryTable-title" style="padding-left: 10px;">
+                <div class="caption">账户预览</div>
+            </div>
+            #if($!{user}&&$!{user.role_type}==0)
+            <div class="page-content testAP-warmBG">
+                <p>！ 当前为测试账户，使用更多功能请联系商务升级账户：<label class="testAP-warmLabel">唐可</label><span class="testAP-warmSpan">18513374140</span></p>
+            </div>
+            #end
+            <div class="page-content primaryAccount-pageCon" style="min-height:10px;">
+            	#if($!{smsTypes}&&$!{smsTypes.size()}>0)
+            		#foreach($smsType in $!{smsTypes})
+		                <div class="sms-types-div01 sms-types-BG0$!{smsType.id}">
+	            		#if($!{accountMap}&&$!{accountMap.size()}>0)
+	            			#set($key = $!{user.id}+"_"+$!{smsType.id})
+            				#if($!{accountMap.get($!{key})})
+		                    <span class="sms-type-noteMum">$!{accountMap.get($!{key}).balance}</span>
+		                    <span class="sms-type-note">$!{smsType.name}</span>
+		                    #else
+		                    <span class="sms-type-noteMum" style="font-size:20px;margin-top:25px;">未开通</span>
+		                    <span class="sms-type-note" style="margin-top:9px;">$!{smsType.name}</span>
+		                    #end
+		                #end
+		                </div>
+	                #end
+                #end
+                <div class="sms-types-div03">
+                	#if($!{user.role_type}!=0)
+                		<a class="xzBtn xzBtn-hover xzBtn-click" href="tradingRecords.do" id="warmA">查看交易记录</a>
+                    	<button class="cxBtn cxBtn-hover cxBtn-click" data-toggle="modal" data-target="#warning" id="warmBtn">余额预警设置</button>
+                    #end
+                	<!-- #if($!{user}&&$!{user.role_type}==0)
+                	<div class="testAP-user">账户级别：测试</div>
+                    <button class="cxBtn cxBtn-hover cxBtn-click" data-toggle="modal" data-target="#testBTN" id="warmBtn">测试</button>
+                    #else
+                    <a class="xzBtn xzBtn-hover xzBtn-click" href="tradingRecords.do" id="warmA">查看交易记录</a>
+                    <button class="cxBtn cxBtn-hover cxBtn-click" data-toggle="modal" data-target="#warning" id="warmBtn">余额预警设置</button>
+                    #end -->
+                </div>  
+            </div>
+            <!-- 模态框（Modal）start -->
+            <div class="modal fade" id="testBTN" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog" style="padding:20px;width: 50%;">
+                    <div class="modal-content">
+                        <div class="modal-header modal-header-borderBTM">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="text-indent: 0px;width: 14px;height: 14px;">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">测试</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table class="testAP-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="testAP-table-td1">手机号</td>
+                                        <td class="testAP-table-td2" colspan="2">
+                                        	<div id="test_send_form">
+	                                            <input class="form-control" name="phone" id="reg_phone" placeholder="请输入手机号码" type="text">
+                                        	</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="testAP-table-td1">验证码</td>
+                                        <td class="testAP-table-td3">
+                                            <input class="form-control testAP-tableYzm" name="sms_code" id="reg_code" type="text">
+                                        </td>
+                                        <td class="testAP-table-td4">
+                                            <a class="testAP-tableBTN"><img src="veriCode.do" onclick="this.src='$!{server_url}/veriCode.do?d='+Math.random();"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="testAP-table-td1">内容预览</td>
+                                        <td colspan="2" class="testAP-table-td2">
+                                           <span class="textAP-tableTip">欢迎使用蜂巢互联短信测试！如果非本人操作，请忽略这条信息【蜂巢互联】</span>
+                                        </td>   
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer index-backModal-footer" style="text-align:left;">
+                            <button class="btn btn-primary btn-xyb" id="send_btn">发送短信</button><span style="padding-left:6px;display:none;color:red;line-height: 45px;">发送成功</span>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            <!-- 模态框（Modal）end -->
+            <!-- 模态框（Modal）start -->
+            <div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog" style="padding:20px;">
+                    <div class="modal-content">
+                        <div class="modal-header modal-header-borderBTM">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="text-indent: 0px;width: 14px;height: 14px;">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">余额预警设置</h4>
+                        </div>
+                        <form action="setWarning.do" method="post">
+                        <div class="modal-body">
+                        	#if($!{accounts} && $!{accounts.size()}>0)
+                        		#foreach($account in $!{accounts})
+	                            <div class="warmCon">
+	                                <div class="warmCon-info-txt">$!{account.smsType.name}</div>
+	                                <div class="warmCon-single-slider">
+						                <div class="warmCon-progress">
+						                    <input id="warning_input_$!{account.user_id}_$!{account.sms_type_id}" name="warning_value_temp" type="text" data-smstype="$!{account.smsType.id}" data-slider-min="0" data-slider-max="$!{account.balance}" data-slider-step="10" data-slider-value="$!{account.warning_balance}"/>
+						                	<input name="warning_value" type="hidden" value="$!{account.smsType.id}_$!{account.warning_balance}"/>
+						                </div>
+						                <div class="warmCon-status">
+						                    <div class="warmCon-status-title">0</div>
+						                	<div class="warmCon-status-number">$!{account.balance}</div>
+						            	</div>
+						            </div>
+	                            </div>
+	                            #end
+                            #end
+                            <div class="warmTip">*余额首次低于预警值时，您将会收到系统的余额提醒通知和短信提醒</div>
+                        </div>
+                        <div class="modal-footer modal-header-borderTop">
+                            <button type="button" class="xzBtn xzBtn-hover xzBtn-click warmBTN-left" data-dismiss="modal">取消</button>
+                            <button type="submit" class="cxBtn cxBtn-hover cxBtn-click warmBTN-right">确认</button>
+                        </div>
+                        </form>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            <!-- 模态框（Modal）end -->
+            <div class="page-content">
+                <div class="sms-types-div02" style="">
+                    <!-- BEGIN PORTLET-->
+                    <div class="portlet light bordered">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <span class="caption-subject caption-span font-dark bold uppercase">实时发送数据</span>
+                            </div>
+                            <div class="actions">
+                                <div class="btn-group">
+                                    <a href="" class="btn dark btn-outline btn-circle btn-sm dropdown-toggle btn-a-type" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">短信类型
+                                        <span class="fa fa-angle-down"> </span>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right type-date-send">
+                                    	<li><a href="javascript:;" data-value="" class="sms_type_select_send">全部类型</a></li>
+                                    	#if($!{accounts}&&$!{accounts.size()}>0)
+                                    		#foreach($account in $!{accounts})
+                                       	 		<li><a href="javascript:;" data-value="$!{account.smsType.id}" class="sms_type_select_send">$!{account.smsType.name}</a></li>
+                                       	 	#end
+                                        #end
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portlet-body portlet-body-minH" id="chartsContainer01"></div>
+                    </div>
+                    <!-- END PORTLET-->
+                </div>
+                <div class="sms-types-div02" style="">
+                    <!-- BEGIN PORTLET-->
+                    <div class="portlet light bordered">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <span class="caption-subject caption-span font-dark bold uppercase">实时发送成功率</span>
+                            </div>
+                            <div class="actions">
+                                <div class="btn-group">
+                                    <a href="" class="btn dark btn-outline btn-circle btn-sm dropdown-toggle btn-a-type" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">短信类型
+                                        <span class="fa fa-angle-down"> </span>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right type-date-send">
+                                    	<li><a href="javascript:;" data-value="" class="sms_type_select_per">全部类型</a></li>
+                                        #if($!{accounts}&&$!{accounts.size()}>0)
+                                    		#foreach($account in $!{accounts})
+                                       	 		<li><a href="javascript:;" data-value="$!{account.smsType.id}" class="sms_type_select_per">$!{account.smsType.name}</a></li>
+                                       	 	#end
+                                        #end
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portlet-body portlet-body-minH" id="chartsContainer02"></div>
+                    </div>
+                    <!-- END PORTLET-->
+                </div>
+            </div>
+        </div>     
+        <!-- AccountPreviewContent end -->           
+    </div> 
+    <script type="text/javascript" src="$!{js_url}/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="${js_url}/heihcharts/highcharts.js"></script>
+	<script type="text/javascript" src="${js_url}/heihcharts/modules/exporting.js"></script>
+	<script type="text/javascript" src="${js_url}/heihcharts/themes/sand-signika.js"></script>    
+    <script type="text/javascript" src="$!{js_url}/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="$!{js_url}/bootstrap.min.js"></script>
+    <script type="text/javascript" src="$!{js_url}/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="$!{js_url}/bootstrap-slider.min.js"></script>
+    <script type="text/javascript" src="$!{js_url}/base.js"></script>
+    <script type="text/javascript">
+    	$("input[name='warning_value_temp']").each(function(){
+    		$("#"+$(this).attr("id")).slider({
+	        	tooltip: 'always'
+	        }).on("change",function(e){
+	        	$(this).siblings("input[name='warning_value']").val($(this).data("smstype")+"_"+e.value.newValue);
+	        });
+    	});
+    	
+		$("#send_btn").click(function(){
+			var _self = this;
+			jQuery.ajax({
+				url: "testSend.do",
+				data:{"phone":$("#reg_phone").val(),"code":$("#reg_code").val()},
+				dataType:"json",
+				success: function(data){
+					$(_self).siblings("span").html(data.msg).show();
+				}
+			});
+		});
+		
+		function createData(url,send_status,result_status,sms_type_id){
+			if(typeof(send_status)=="undefined"||send_status==null)
+				send_status = '';
+			if(typeof(result_status)=="undefined"||result_status==null)
+				result_status = '';
+			if(typeof(sms_type_id)=="undefined"||sms_type_id==null)
+				sms_type_id = '';
+			var data = [],count;                                                 
+            jQuery.ajax({
+				type: 'post',
+				url: url,
+				data:{"send_status":send_status,"result_status":result_status,"sms_type_id":sms_type_id},
+				dataType:"json",
+				async: false,
+				cache : false,
+				success: function(text){
+					var h = new Date().format("h");//获取当前时间的小时数
+					for(var i=0;i<=h;i++){
+						count = 0;
+						for(var a=0;a<text.length;a++){
+							if(i==parseInt(text[a].hour)){
+								count = text[a].total;
+								break;
+							}
+						}
+						if(url=="instantStatPer.do")
+							count = count*100.0;
+						data.push(count);
+					}
+				}
+			});
+            return data; 
+		}
+		
+		function sendDataStat(sms_type_id){
+			var url = "instantSendStat.do";
+			$('#chartsContainer01').highcharts({
+		    	chart: {
+		    		type: 'area'
+		    	},
+		        title: {
+		            text: '',
+		            x: -20 //center
+		        },
+		        
+		        legend: {//去掉图例
+		        	enabled:true,
+		            //layout: 'vertical',
+		            align: 'center',
+		            verticalAlign: 'bottom',
+		            borderWidth: 0
+		        },
+		        credits: {//去掉右下角水印
+					enabled:false
+				},                                                                      
+		        exporting: {//去掉右上角打印按钮 
+		            enabled: false
+	            },
+		        xAxis: {
+		            categories: (function(){
+		            	var hours = [];
+		            	for(var i=0;i<24;i++){
+		            		hours.push(i);
+		            	}
+		            	return hours;
+		            })()
+		        },
+		        yAxis: {
+		            title: {
+		                text: '条数'
+		            },
+		            plotLines: [{
+		                value: 0,
+		                width: 1,
+		                color: '#808080'
+		            }]
+		        },
+		        tooltip: {
+		            formatter: function() {
+                        return '<b>'+ this.series.name +'</b><br/>条数：'+
+                       Highcharts.numberFormat(this.y, 0);                         
+	                }  
+		        },
+		        series: [{
+		        	name:'发送数',                                                
+	                data:createData(url,null,null,sms_type_id)
+		        },
+		        {
+		        	name:'送达数',                                                
+	                data:createData(url,2,null,sms_type_id)
+		        },
+		        {
+		        	name:'成功数',                                                
+	                data:createData(url,null,1,sms_type_id)
+		        }]
+		    });
+		}
+		sendDataStat(null);
+		$(".sms_type_select_send").click(function(){
+			sendDataStat($(this).data("value"));
+		});
+		
+		function perDataStat(sms_type_id){
+			var url = "instantStatPer.do";
+			$('#chartsContainer02').highcharts({
+		    	chart: {
+		    		type: 'area'
+		    	},
+		        title: {
+		            text: '',
+		            x: -20 //center
+		        },
+		        
+		        legend: {//去掉图例
+		        	enabled:true,
+		            //layout: 'vertical',
+		            align: 'center',
+		            verticalAlign: 'bottom',
+		            borderWidth: 0
+		        },
+		        credits: {//去掉右下角水印
+					enabled:false
+				},                                                                      
+		        exporting: {//去掉右上角打印按钮 
+		            enabled: false
+	            },
+		        xAxis: {
+		            categories: (function(){
+		            	var hours = [];
+		            	for(var i=0;i<24;i++){
+		            		hours.push(i);
+		            	}
+		            	return hours;
+		            })()
+		        },
+		        yAxis: {
+		            title: {
+		                text: '成功率(%)'
+		            },
+		            plotLines: [{
+		                value: 0,
+		                width: 1,
+		                color: '#808080'
+		            }]
+		        },
+		        tooltip: {
+		            formatter: function() {
+                        return '<b>'+ this.series.name +'</b><br/>成功率：'+
+                       Highcharts.numberFormat(this.y, 2) + "%";                         
+	                }  
+		        },
+		        series: [{
+		        	name:'送达成功率',                                                
+	                data:createData(url,2,null,sms_type_id)
+		        },{
+		        	name:'发送成功率',                                                
+	                data:createData(url,null,1,sms_type_id)
+		        }]
+		    });
+		}
+		perDataStat(null);
+		$(".sms_type_select_per").click(function(){
+			perDataStat($(this).data("value"));
+		});
+    </script>
+</body>
+</html>

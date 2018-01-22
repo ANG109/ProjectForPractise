@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="bw-practise:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/bw_practise_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="lib" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="bw-practise/web/Web" />
+    </root>
+  </artifact>
+</component>

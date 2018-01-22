@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-body>
+ <people>
+    <name>Maxqh</name>
+    <age>old man</age>
+    <personalInformation>single man</personalInformation>
+ </people>
+  <people>
+    <name>ANG</name>
+    <age>pretty girl</age>
+    <personalInformation>long hair</personalInformation>
+ </people>
+</xml-body>

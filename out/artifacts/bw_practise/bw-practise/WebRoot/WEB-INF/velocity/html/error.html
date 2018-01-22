@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>error.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    error <br>
+  </body>
+  
+  <script type="javascript/text">
+
+      window.onload = function(){ 
+	    var val=$("#appInfoValue").val();
+	    var a=document.getElementById("modal1");
+	    var b=document.getElementById("modal2");
+        if(val==""||val==null){
+            a.style.display="none";
+            b.style.display="block";
+        }
+        else{
+            a.style.display="block";
+            b.style.display="none";
+        } 
+        
+        var dateNow = new Date();
+        var yearNow = dateNow.getFullYear()+'';
+        var dayNow = dateNow.getDate()+'';
+        if(dateNow.getMonth()<10){
+        var monthNow = '0'+(dateNow.getMonth()+1);
+        }else{
+        var monthNow = ''+(dateNow.getMonth()+1);
+        }
+        var dayToday = (yearNow+monthNow+dayNow)*1;
+        var dateCredit = $("#creditTime").val();
+        if(dateCredit == null || dateCredit == ''){
+             document.getElementById("creditColor").style.color = "gray"; 
+             }else{
+			        var arys = dateCredit.split('-');
+			        var dayCredit = (arys[0]+arys[1]+arys[2])*1;
+			        if(dayCredit<dayToday){
+			             document.getElementById("creditColor").style.color = "gray";   
+			      }
+        }
+   }
+     
+</script>
+</html>

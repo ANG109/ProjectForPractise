@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bw.practise.ang.mapper.UserMapper">
+	<sql id="where">
+	    <where>
+		   <if test="phone!=null">
+		   and phone = #{phone}
+		   </if>
+		   <if test="password!=null">
+		   and password = #{password}
+		   </if>
+		 </where> 
+	</sql>
+	<!--用户登录 -->
+	<select id="LoginUI" resultType="User">
+	   select * from t_user 
+	   <include refid = "where"/>
+	</select>
+	
+	<!-- 联合查询searchTable -->
+	<!-- 用户注册  -->
+	<insert id="insertUser"  >
+	  insert into t_user(name,password)values(#{name},#{password})
+	</insert>
+	
+	<!-- 注册信息判断  -->
+    <select id="findUserByName" resultType="Integer">
+       select id from t_user where name=#{name}
+    </select> 	
+    
+    <select id="findbyId" resultType="user">
+       select * from t_user  where id = #{id}
+    </select>
+</mapper>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>register</title>
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+     <script type="text/javascript" src="${js_url}/jquery-1.9.1.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  <h3>注册</h3>
+  <body>
+        用户名: <input type="text" id="user_name" name="username"><br>
+         密码: <input type="password" id="password" name="password"><br>
+    密码确认：<input type="text" id="passwordConfirm" name="passwordConfirm"/><br>
+    等级申请：<select id="sel">
+			    <option value="0">一级</option>
+			    <option value="1">二级</option>
+           </select>
+           <br>
+       
+       <input type="button" value="提交" onclick="submit();">
+  </body>
+  <script type="text/javascript">
+   var user_name = $("#user_name").val();
+   var password = $("#password").val();
+   var passworConfirm = $("#passwordConfirm").val();
+   function submit(){
+      /*  if(user_name==null||user_name==""){
+          alert("用户名不能为空");
+       }
+       if(password==null||password==""){
+          alert("密码不能为空");
+       }
+       if(passworConfirm==null||passworConfirm==""){
+          alert("请输入确认密码");
+       }
+       if(!password.equals(passwordConfirm)){
+           alert("两次密码输入不同，请再次确认");
+           return false;
+       }    */
+       jQuary.ajax({
+           type:post,
+           url:"register.do",
+           data:{ user_name : user_name , password : password},
+           success: function(data){
+             if(data="successfully"){
+              location.reload();     
+              }             
+           }
+       	
+       })
+   }
+  </script>
+  
+</html>

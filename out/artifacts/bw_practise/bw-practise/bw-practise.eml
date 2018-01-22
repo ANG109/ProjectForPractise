@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="1.7" jdk_type="JavaSDK">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="urlrewritefilter-4.0.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/urlrewritefilter-4.0.3.jar!/"/>
+	</lib>
+	<lib name="velocity-1.6.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/velocity-1.6.2.jar!/"/>
+	</lib>
+	<lib name="velocity-tools-2.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/velocity-tools-2.0.jar!/"/>
+	</lib>
+	<lib name="commons-collections-3.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-collections-3.2.jar!/"/>
+	</lib>
+	<lib name="commons-beanutils-1.7.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-beanutils-1.7.0.jar!/"/>
+	</lib>
+	<lib name="commons-dbcp-1.2.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-dbcp-1.2.2.jar!/"/>
+	</lib>
+	<lib name="commons-digester-1.8.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-digester-1.8.jar!/"/>
+	</lib>
+	<lib name="commons-fileupload-1.2.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-fileupload-1.2.2.jar!/"/>
+	</lib>
+	<lib name="commons-io-2.4.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-io-2.4.jar!/"/>
+	</lib>
+	<lib name="commons-lang-2.6.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-lang-2.6.jar!/"/>
+	</lib>
+	<lib name="commons-logging-1.1.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-logging-1.1.1.jar!/"/>
+	</lib>
+	<lib name="commons-pool-1.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-pool-1.3.jar!/"/>
+	</lib>
+	<lib name="aopalliance-1.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/aopalliance-1.0.jar!/"/>
+	</lib>
+	<lib name="asm-3.3.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/asm-3.3.1.jar!/"/>
+	</lib>
+	<lib name="aspectjweaver-1.6.11.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/aspectjweaver-1.6.11.jar!/"/>
+	</lib>
+	<lib name="cglib-2.2.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/cglib-2.2.2.jar!/"/>
+	</lib>
+	<lib name="javassist-3.17.1-GA.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/javassist-3.17.1-GA.jar!/"/>
+	</lib>
+	<lib name="jstl-1.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/jstl-1.2.jar!/"/>
+	</lib>
+	<lib name="junit-4.9.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/junit-4.9.jar!/"/>
+	</lib>
+	<lib name="log4j-1.2.17.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/log4j-1.2.17.jar!/"/>
+	</lib>
+	<lib name="log4j-api-2.0-rc1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/log4j-api-2.0-rc1.jar!/"/>
+	</lib>
+	<lib name="log4j-core-2.0-rc1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/log4j-core-2.0-rc1.jar!/"/>
+	</lib>
+	<lib name="mybatis-3.2.7.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/mybatis-3.2.7.jar!/"/>
+	</lib>
+	<lib name="mybatis-spring-1.2.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/mybatis-spring-1.2.2.jar!/"/>
+	</lib>
+	<lib name="mysql-connector-java-5.1.7-bin.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/mysql-connector-java-5.1.7-bin.jar!/"/>
+	</lib>
+	<lib name="slf4j-api-1.7.5.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/slf4j-api-1.7.5.jar!/"/>
+	</lib>
+	<lib name="slf4j-log4j12-1.7.5.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/slf4j-log4j12-1.7.5.jar!/"/>
+	</lib>
+	<lib name="spring-aop-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-aop-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-aspects-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-aspects-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-beans-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-beans-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-context-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-context-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-context-support-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-context-support-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-core-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-core-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-expression-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-expression-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-jdbc-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-jdbc-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-orm-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-orm-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-test-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-test-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-tx-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-tx-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-web-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-web-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="spring-webmvc-3.2.0.RELEASE.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/spring-webmvc-3.2.0.RELEASE.jar!/"/>
+	</lib>
+	<lib name="poi-3.6-20091214.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/poi-3.6-20091214.jar!/"/>
+	</lib>
+	<lib name="mail.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/mail.jar!/"/>
+	</lib>
+	<lib name="javax.mail.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/javax.mail.jar!/"/>
+	</lib>
+	<lib name="dom4j-1.6.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/dom4j-1.6.1.jar!/"/>
+	</lib>
+	<lib name="jaxen-1.1-beta-7.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/jaxen-1.1-beta-7.jar!/"/>
+	</lib>
+	<lib name="java-mail-1.4.4.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/java-mail-1.4.4.jar!/"/>
+	</lib>
+	<lib name="json.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/json.jar!/"/>
+	</lib>
+	<lib name="commons-collections.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-collections.jar!/"/>
+	</lib>
+	<lib name="commons-httpclient-3.0.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-httpclient-3.0.1.jar!/"/>
+	</lib>
+	<lib name="commons-lang-2.4.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-lang-2.4.jar!/"/>
+	</lib>
+	<lib name="commons-logging-1.0.4.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-logging-1.0.4.jar!/"/>
+	</lib>
+	<lib name="ezmorph-1.0.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/ezmorph-1.0.3.jar!/"/>
+	</lib>
+	<lib name="json-lib-2.2.3-jdk15.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/json-lib-2.2.3-jdk15.jar!/"/>
+	</lib>
+	<lib name="json-lib-2.3-jdk13.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/json-lib-2.3-jdk13.jar!/"/>
+	</lib>
+	<lib name="fastjson-1.2.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/fastjson-1.2.2.jar!/"/>
+	</lib>
+	<lib name="commons-fileupload-1.3.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/out/artifacts/bw_practise/bw-practise/WebRoot/WEB-INF/lib/commons-fileupload-1.3.2.jar!/"/>
+	</lib>
+	<lib name="Tomcat 8.5.11" scope="PROVIDED"/>
+	<levels>
+		<level name="Tomcat 8.5.11" value="application_server_libraries"/>
+		<level name="WEB-INF" value="project"/>
+	</levels>
+</component>

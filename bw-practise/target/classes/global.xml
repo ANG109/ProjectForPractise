@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE global_data [
+  <!ELEMENT global_data (global)> 
+  <!ELEMENT global (param+)>
+  <!ATTLIST param name CDATA #REQUIRED value CDATA #REQUIRED>
+]>
+<!-- 全局变量根目录 -->
+<global_data>
+	<global>
+		<param name="head_title" value="北纬通信.物联网客户平台" />
+		<param name="host_url" value="http://localhost:8080" />
+		<param name="server_url" value="http://localhost:8080/bw-practise" />
+		<param name="style_url" value="http://localhost:8080/bw-practise/style" />
+		<param name="js_url" value="http://localhost:8080/bw-practise/js"/>
+		<param name="images_url" value="http://localhost:8080/bw-practise/images" />
+	</global>
+</global_data>

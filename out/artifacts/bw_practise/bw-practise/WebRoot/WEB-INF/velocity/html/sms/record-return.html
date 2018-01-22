@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>一级账户-返回报告</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="stylesheet" href="$!{style_url}/bootstrap.min.css" />
+        <link rel="stylesheet" href="$!{style_url}/components.min.css" />
+        <link rel="stylesheet" href="$!{style_url}/bootstrap-datetimepicker.min.css" />
+        <link rel="stylesheet" href="$!{style_url}/bootstrap-select.min.css">
+        <link rel="stylesheet" href="$!{style_url}/style.css" />   
+        <style>
+        	div.queryTable-bodyList>table >tbody> tr{min-height: 20px!important;line-height: 20px !important;}
+			div.queryTable-bodyList>table >tbody> tr > td{min-height: 20px !important;} 
+        </style> 
+    </head>
+<body id="allBody">
+    <div id="wrapper">
+        <div id="page-wrapper">
+            <div class="portlet-title queryTable-title">
+                <div class="caption">返回报告</div>
+            </div>
+            <div class="page-content">
+                <div class="m-heading-1 border-blue m-bordered">
+                </div>
+                <div class="portlet light bordered rPTable-bodyBG">
+                    <div class="portlet-body portlet-body-scrollMTop" id="padTop">
+                        <div class="bootstrap-table">
+                            <div class="fixed-table-container">
+                                <div class="fixed-table-body queryTable-bodyList">
+                                    <table class="allData-queryStartTable">
+                                        <thead class="queryTable-headerList" >
+                                            <tr>
+                                                <th class="dataQueryTable-thd02">发送账户</th>
+                                                <th class="dataQueryTable-thd03">手机号</th>
+                                                <th>发送时间</th>
+                                                <th>接收时间</th>
+                                                <th class="dataQueryTable-thd05">
+                                                    <select name="result_status" id="selectpicker02" class="selectpicker selectConBg1 type_select" data-index="1">
+                                                        <option value="" #if(!$!{result_status}) selected="selected" #end>全部状态</option>
+                                                        <option value="1" #if($!{result_status}==1) selected="selected" #end>发送失败</option> 
+                                                    </select>
+                                                </th>
+                                                <th class="dataQueryTable-thd06">
+                                                    <select  name="sms_type" id="msg_P01" class="selectpicker selectConBg1 type_select" data-index="2">
+                                                        <option value="" #if(!$!{sms_type}) selected="selected"#end>全部类型</option>
+                                                                #if($!{smsType} && $!{smsType.size()}>0)
+                                                                    #foreach($st in $!{smsType})
+                                                                    <option value="$!{st.id}" #if($!{sms_type}==$!{st.id}) selected="selected" #end>$!{st.name}</option>
+                                                                   #end
+                                                                #end
+                                                    </select>
+                                                </th>
+                                                <th style="width:40px">条数</th>
+                                                <th>短信内容</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="queryTable-bodyList-scrollNo">
+                                          #if($!{list} && $!{list.size()}>0)
+                                               #foreach($sms in $!{list})
+                                          <tr>
+                                            <td>$!{sms.user_id}</td>
+                                      		<td id="colorPhone" style="color:red">$!{sms.phone}</td>
+                                      		<td>$!{sms.send_time}</td>
+                                      		<td>$!{sms.callback_time}</td>
+										    <td class="firstStyle" colspan="15" style="height:50px;">没有记录</td>
+										  </tr>
+										       #end
+										  #end
+										  
+                                        </tbody>
+                                       
+                                    </table>
+                                </div>
+                                #if(${sr_list}&&${sr_list.size()}>0)
+									#PCPAGE("$!{server_url}/returnRecord.do?phone=$!{phone}&send_time=$!{send_time}&content=$!{content}&sms_type=$!{sms_type}&user_id=$!{user_id}&result_status=$!{result_status}")
+								#end
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+        </div>     
+    </div> 
+   	<script src="$!{js_url}/jquery-1.9.1.js"></script>    
+    <script src="$!{js_url}/bootstrap-datetimepicker.js"></script> 
+    <script src="$!{js_url}/bootstrap-modal.js"></script>
+    <script src="$!{js_url}/bootstrap.min.js"></script> 
+    <script src="$!{js_url}/bootstrap-select.min.js"></script>
+    <script src="$!{js_url}/index.js"></script>     
+    <script type="text/javascript">
+       ("#colorPhone").val();
+       function getWindows(){
+       		window.open("$!{server_url}/smsRecord.do?", "newwindow", "height=400, width=800, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+       }
+    	$(".type_select").change(function(){
+    		$("#type_id_"+$(this).data("index")).val($(this).val());
+    		$("#search_form").submit();
+    	});
+    	$(function () {
+		  $('[data-toggle="tooltip"]').tooltip()
+		})
+    </script>
+</body>
+</html>

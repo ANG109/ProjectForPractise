@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SendEmail.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="${js_url}/jquery-1.9.1.js"></script>
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <form action="sendMail .do" method="post" enctype="multipart/form-data">
+       
+		            邮箱地址：<input type="text" name="mail_address" id="mail_address"/><br/>
+		            邮件标题：<input type="text" name="mail_title" id="mail_title" /><br/>
+		            发送内容：<input type="text" name="mail_content" id="mail_content"/><br/>
+        	附件名称：<input type="text" name="file_name"  id="file_name"/><br/> 
+        	<!-- 选择附件：<input type="file" name="mail_file" id="mail_file"/><br/> -->
+        	
+        <div>
+   			<input type="hidden" id="pic_up_value" name="img"/>
+   			<img id="pic_up_view" src="">
+   			<div id="pic_up_ID1">点击上传</div>
+   			<span>图片(640*300)</span>
+        </div>  
+        	<input type="button" value="submit" onclick="submit();"/> 
+        	<a href="javascript:;" onclick="add();">添加</a>
+           
+    </form>
+     
+    
+  </body>
+<script type="text/javascript">
+  
+   /*初始化upload对象  */
+   var buttonLis = new Array ("pic_up_ID1",640,300);
+   for(var i = 0;i < buttonLis.length;i++){
+       var param = buttonLis[i].split(",");
+       imgUpload(param[0],param[2],param[3]);
+   }
+   function submit(){
+    var mail_address = $("#mail_address").val();
+    var mail_title =$("#mail_title").val();
+    var mail_content =$("#mail_content").val();
+    var file_name =$("#file_name").val();
+       jQuary.ajax({
+           type:post,
+           url:"sendMail.do",
+           data:{ mail_address : mail_address , mail_title : mail_title , mail_content : mail_content },
+           success: function(data){
+             if(data="successfully"){
+              location.reload(); 
+                  
+              }             
+           }
+       });
+       function imgUpload(button,width,height){
+ 
+      new AjaxUpload(
+      button,
+      {
+             	
+					action :"upload.do?width="+width+"&height="+height,
+					autoSubmit : true,
+					name : "source",// 文件对象名称（不是文件名）
+					dataType:"text",
+					onSubmit : function(file, ext) {
+						if (ext&& /^(jpg|png|jpeg|JPG|PNG|JPEG)$/.test(ext)) {
+							this.setData( {
+								"fileType" : ext
+							});
+						} else {
+							alert("文件格式错误:只能上传图片类型 ,正确格式为: .jpg .png .jpeg ,请重新上传!");
+							return false;
+						}
+					},
+					onComplete : function(file, response) {
+						var obj = eval("(" + response + ")");
+						if(obj!=null&&obj!=undefined){
+							if(obj.result==0){
+								$("#"+button).html("上传成功");
+								$("#"+button+"_value").val(obj.msg);
+								$("#"+button+"_view").attr("src", "$!{upload_images_url}" + obj.msg);
+							}else{
+								alert(obj.msg);
+							}
+						}else{
+							alert("系统错误");
+						}
+					}    
+      
+      }
+      
+      );
+ 
+  } 
+ 
+ 
+ 
+ }
+  
+</script>
+</html>

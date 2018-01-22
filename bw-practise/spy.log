@@ -1,0 +1,33 @@
+1515139182742|-1||debug||com.p6spy.engine.common.P6SpyOptions reloading properties
+03:59:42,758|-1||info||Using properties file: C:\Users\wangfang\Desktop\bw-practise\bw-practise\target\classes\spy.properties
+03:59:42,758|-1||info||No value in environment for: getStackTrace, using: false
+03:59:42,758|-1||info||No value in environment for: getLogfile, using: spy.log
+03:59:42,758|-1||info||No value in environment for: getSpydriver, using: com.p6spy.engine.spy.P6SpyDriver
+03:59:42,758|-1||info||No value in environment for: getAppender, using: com.p6spy.engine.logging.appender.StdoutLogger
+03:59:42,758|-1||info||No value in environment for: getStackTraceClass, using: 
+03:59:42,758|-1||info||No value in environment for: getSQLExpression, using: null
+03:59:42,758|-1||info||No value in environment for: getIncludecategories, using: statement
+03:59:42,758|-1||info||No value in environment for: getExcludecategories, using: info,debug,result,batch,resultset
+03:59:42,758|-1||info||No value in environment for: getDateformat, using: hh:mm:ss,SSS
+03:59:42,758|-1||info||No value in environment for: getRealdriver, using: com.mysql.jdbc.Driver
+03:59:42,758|-1||info||No value in environment for: getStringmatcher, using: com.p6spy.engine.common.SubstringMatcher
+03:59:42,758|-1||info||No value in environment for: getRealdriver3, using: null
+03:59:42,758|-1||info||No value in environment for: getDateformatter, using: java.text.SimpleDateFormat@188b59c7
+03:59:42,758|-1||info||No value in environment for: getReloadProperties, using: false
+03:59:42,758|-1||info||No value in environment for: getExecutionThreshold, using: 0
+03:59:42,758|-1||info||No value in environment for: getDeregisterDrivers, using: true
+03:59:42,758|-1||info||No value in environment for: getRealdriver2, using: null
+03:59:42,758|-1||info||No value in environment for: getStringMatcherEngine, using: com.p6spy.engine.common.SubstringMatcher@5a61b819
+03:59:42,758|-1||info||No value in environment for: getRealDataSourceClass, using: null
+03:59:42,758|-1||info||No value in environment for: getReloadPropertiesInterval, using: 60
+03:59:42,758|-1||info||No value in environment for: getAppend, using: false
+03:59:42,758|-1||info||No value in environment for: getFilter, using: false
+03:59:42,758|-1||info||No value in environment for: getUsePrefix, using: false
+03:59:42,758|-1||info||No value in environment for: getAutoflush, using: true
+03:59:42,758|-1||info||No value in environment for: getExclude, using: 
+03:59:42,758|-1||info||No value in environment for: getRealDataSource, using: null
+03:59:42,758|-1||info||No value in environment for: getJNDIContextCustom, using: null
+03:59:42,758|-1||info||No value in environment for: getJNDIContextProviderURL, using: null
+03:59:42,758|-1||info||No value in environment for: getJNDIContextFactory, using: null
+03:59:42,758|-1||info||No value in environment for: getRealDataSourceProperties, using: null
+03:59:42,758|-1||info||No value in environment for: getInclude, using: 

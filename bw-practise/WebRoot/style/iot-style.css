@@ -1,0 +1,173 @@
+@charset "utf-8";
+div,p,ul,ol,li,lih1,h2,h3,h4,h5,h6,form,input,table{padding:0; margin:0; font-size:12px; font-family:"微软雅黑";}
+ol,ul,dl{list-style:none;}
+img{border:0;}
+table{boder-collapse:collapse; border-spacing:0;}
+a{text-decoration:none !important;cursor: pointer;color:#1ea185}
+h1,h2,h3,h4,h5,h6{font-weight:normal; font-size:100%;}
+.clear{clear:both;}
+/**子页面的边距*/
+body{margin:10px 40px;}
+/*@media start*/
+@media (min-width: 1440px) and (max-width: 1950px){
+	.navBox{width:1200px;}
+	div.navBox>ul>li.navList{padding: 0px 18px 0px 18px;}
+	.logoBox{top:150px;}
+	.indexContent{top:250px;left:50%;}
+	.index-login{margin:40px auto 30px auto;}
+	.login-content{padding: 0 0 55px 0;}
+	.index-block{background:url(../images/back.png) no-repeat center top;background-size: 100% 100%;}
+}
+@media (min-width: 1024px) and (max-width: 1439px){
+	.navBox{width:1000px;}
+	div.navBox>ul>li.navList{padding: 0px 14px 0px 14px;}
+	.logoBox{top:100px;}
+	.logoBox>img{width:13%;}
+	.indexContent{top:170px;left:50%;}
+	.index-login{margin:14px auto 0px auto;}
+	.login-content{padding: 0 0 42px 0;}
+	.index-block{background:url(../images/back.png) no-repeat center top;background-size: 100% 76%;}
+	a#loginBtn{margin-top:0px !important;}
+	.loginLogo img{width: 80%;}
+}
+@media (min-width: 991px) and (max-width: 1023px){
+	.navBox{width:900px;}
+	div.navBox>ul>li.navList{padding: 0px 14px 0px 14px;}
+	.logoBox{top:100px;}
+	.logoBox>img{width:13%;}
+	.indexContent{top:170px;left:50%;}
+	.index-login{margin:14px auto 0px auto;}
+	.login-content{padding: 0 0 42px 0;}
+	.index-block{background:url(../images/back.png) no-repeat center top;background-size: 100% 76%;}
+	a#loginBtn{margin-top:0px !important;}
+	.loginLogo img{width: 80%;}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.navBox{width:900px;}
+	div.navBox>ul>li.navList{padding: 0px 14px 0px 14px;}
+	.logoBox{top:100px;}
+	.logoBox>img{width:13%;}
+	.indexContent{top:170px;left:50%;}
+	.index-login{margin:14px auto 0px auto;}
+	.login-content{padding: 0 0 42px 0;}
+	.index-block{background:url(../images/back.png) no-repeat center top;background-size: 100% 76%;}
+	a#loginBtn{margin-top:0px !important;}
+	.loginLogo img{width: 80%;}
+}
+@media screen and (max-width: 767px){}
+/*@media end*/
+/*登录页*/
+.headBox{position:absolute;width:100%;background-color:#202830;;font-size:14px;color:#fff;z-index:100;
+		-webkit-opacity: 0.85; /* older safari/Chrome browsers */  
+		-moz-opacity: 0.85; /* Netscape and Older than Firefox 0.9 */  
+		-khtml-opacity: 0.85;/* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/  
+		opacity: .85;/* IE9 + etc...modern browsers */  
+		filter:alpha(opacity=85);/* IE 4-9 */  
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";/*This works in IE 8 & 9 too*/  
+		filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=85);/*IE4-IE9*/ }
+.navBox{/*width:1200px;*/height:75px;line-height:75px;margin:0 auto; }
+.loginLogo{float:left;height:75px;line-height:75px;}
+.loginLogo img{vertical-align:middle;}
+div.navBox>ul>li{height:75px;line-height:75px;margin:0 2px;}
+div.navBox>ul>li>a{display: block;height: 75px;line-height: 75px;font-weight: 600;color: #fff;font-size: 16px;}
+div.navBox>ul>li>a:hover{color: #1ea185;border-bottom: 5px solid #1ea185;color:#1ea185;height: 70px;}
+div.navBox>ul>li.navList{width: 100px;float: right;font-size: 16px;text-align: center;/*margin: 0px 25px 0px 15px;*//*padding: 0px 18px 0px 18px;*/}
+div.navBox ul li.home{height:70px;width:42px !important;}
+li.navList-aboutUs{background: url(../images/nav_02.png) no-repeat 0 23px;width: 124px !important;margin-left: 16px !important;}
+li.navList-aboutUs>a:hover{border-bottom: none !important;}
+li.navList-aboutUs>a{padding-left: 6px;color:#1ea185!important;}
+li.aOn{border-bottom: 5px solid #1ea185;}
+li.aOn>a{color: #1ea185!important;}
+div.navBox>ul>li.navList>ul.product-parts{position: absolute;z-index: 1000;width: 170px;height: 120px;background: url(../images/nav_05.png) no-repeat center center;right: 438px;top: 64px;display: none;}
+div.navBox>ul>li.navList>ul.product-parts>li{height: 20px;line-height: 20px;margin-top: 26px;z-index: 1000;}
+div.navBox>ul>li.navList>ul.product-parts>li>a{display: inline-block;text-align: center;position: relative;width: 170px;color: #333;font-size: 16px;height: 20px;line-height: 20px;z-index: 1000; }
+div.navBox>ul>li.navList>ul.product-parts>li>a:hover{color:#1ea185; }
+
+.index-block{position:relative;width:100%;height:500px;/*background:url(../images/back.png) no-repeat center top;background-size: 100% 100%;*/}
+.indexContent{position:absolute; width:430px;/*top:250px;left:50%;*/margin-left:-215px; border:1px solid #ccc;background-color:#fff;-webkit-box-shadow: 0px 0px 4px #ccc;-moz-box-shadow: 0px 0px 4px; box-shadow: 0px 0px 4px #666; }
+.index-login{width:80%;/*margin:40px auto 30px auto;*/color:#333;font-size:20px; border-bottom: 1px solid #e7e7e8;height:40px;line-height:40px;text-align:center;padding-bottom:10px;}
+.login-content{width:80%;position: relative;margin: 0 auto;background-color: #fff;/*padding: 0 0 55px 0;*/}
+.fsyzm{display: inline-block;height: 48px;width:120px;border: 1px solid #ccc;float:left;border-radius: 5px;margin-right:15px;}
+.fsyzm>img{width: 100%;height: 48px;display: block;cursor: pointer;border-radius: 5px;}
+.loginButton span{color: #fff;font-size:18px;}
+.loginInput{margin:20px 0; }
+.loginInput .textbox-text{font-size:16px;}
+p.error_msg{color:#e74c3c;text-align:left;margin-top:5px;height:20px; }
+.logoBox{position: absolute;width: 100%;height:auto;z-index: 1000;/*top:150px;*/}
+.logoBox>img{position: relative;display: block;margin: 0 auto;}
+/* 登录页 end */
+
+.page-logo{float:left;height:70px;}
+.page-logo img{height:40px;margin:15px 0 0 40px;}
+.page-logo span{color:#FFF;font-size:14px;font-weight:bolder;}
+.navbar-footer{float:right;margin-right:40px;}
+.navbar-footer-txt{color: #DADBDD !important;font-size: 16px;display: inline-block;height:70px;line-height:70px;}
+a.navbar-footer-txt:hover{color: #fff !important;cursor: pointer;}
+
+#allBody{padding: 0 40px;background:#fff;}
+.navTop{height:56px;}
+.navTop ul{display: inline-block;cursor: pointer;}
+.navTop ul li{height: 52px;line-height: 52px;font-size: 14px;padding:0 25px;display: inline-block;}
+.navTop ul li a{display: inline-block;height: 52px;line-height: 52px;font-size: 14px;text-align: center;color: #666;padding-left: 26px;}
+.navTop ul li:hover{height: 52px;border-bottom: 4px solid #1ea185;}
+.navTop ul li a:hover{color: #1ea185;}
+a.topA1{background: url(../images/topMenu1.png) no-repeat center left;}
+a.topA2{background: url(../images/topMenu2.png) no-repeat center left;}
+a.topA3{background: url(../images/topMenu3.png) no-repeat center left;}
+a.topA4{background: url(../images/topMenu4.png) no-repeat center left;}
+a.topA5{background: url(../images/topMenu5.png) no-repeat center left;}
+a.topA1:hover{background: url(../images/topMenuHover1.png) no-repeat center left;}
+a.topA2:hover{background: url(../images/topMenuHover2.png) no-repeat center left;}
+a.topA3:hover{background: url(../images/topMenuHover3.png) no-repeat center left;}
+a.topA4:hover{background: url(../images/topMenuHover4.png) no-repeat center left;}
+a.topA5:hover{background: url(../images/topMenuHover5.png) no-repeat center left;}
+.topOn{height: 52px !important;border-bottom: 4px solid #1ea185;}
+.navTop ul li a.topMenuSelected{color: #1ea185;}
+
+/**卡管理页面*/
+div.cardShowList,.userInfoArea{padding:3px 10px 0 10px;float:left;}
+div.cardShowList>ul{line-height:55px;}
+div.cardShowList>ul>li{display: inline-block;border-right: 1px solid #b3b3b3;height:30px;line-height:30px;margin-right:4px;padding-right:10px;}
+div.cardShowList>ul>li>img{display:inline-block;vertical-align:middle;width:22px;height:22px;margin-top:-5px;}
+div.cardShowList>ul>li>p{display:inline-block;color:#464646;font-size:14px;}
+div.cardShowList>ul>li>p>em{color:#464646;font-size:14px;}
+div.cardShowList span,.userInfoArea span{margin:5px 10px 5px 0;display:inline-block;padding-bottom:3px;}
+
+div.cardOP{float:right;padding:0 10px;}
+div.cardOP>ul{clear:both;line-height:58px;}
+div.cardOP>ul>li{display:inline-block;margin-right:20px;height:40px;line-height:40px; }
+.userInfoPhoto{padding-top:5px;float:right;}
+.photoItem,.bigPhotoItem{height:55px;width:80px; border:1px #1ea185 solid;float:left;margin-right:10px;position:relative;}
+.bigPhotoItem{width:175px;height:115px;}
+.photoItem img,.bigPhotoItem img{height:100%;width:100%;}
+.photoItem span,.bigPhotoItem span{position:absolute;top:0;right:0;text-align:right;background:#1ea185;color:#fff;padding:3px;z-index:9;font-size:10px;}
+
+.searchOptionsPanel{float:right;}
+.searchOptionsPanel ul li{display:inline-block;margin-right:20px;}
+
+/**公共按钮*/
+.globalBtn{min-width:100px !important;height:28px;line-height:26px;padding:0 5px; text-align:center; display:inline-block;font-size:14px;border: 1px solid #1ea185;background-color:#1ea185;cursor:pointer; border-radius: 5px !important;-moz-border-radius: 5px !important;-webkit-border-radius: 5px !important;color: #fff;min-width: 100px !important;}
+.globalBtn-hover:hover{padding:0 5px;background-color: #fff;color: #1ea185;border: 1px solid #1ea185;height:28px;}
+.pubInput{margin:10px 0;}
+.pubInput span{font-size:14px;}
+
+/**修改easyui的某些属性*/
+.datagrid-row-selected {background:#1ea185;color: #fff;}
+.datagrid-row-selected a{color:#fff;}
+
+.custom-panel{background:#fff;border:#D4D4D4 1px solid;}
+
+#loading{height:30px;width:200px;padding:5px 0; position:absolute;top:30%; left:50%; margin-left:-100px;color:#000;text-align:center;line-height:30px; background:#fff;border:2px #D4D4D4 solid;display:none;z-index:99999;}
+#loading img{width:16px;height:16px;vertical-align:middle;}
+
+.windowTitle{background:#e8ebef;padding:15px 10px;}
+.windowBody{padding:10px;}
+.windowBody li{line-height:24px;padding:5px 0;}
+.windowBody td{border:1px #E0E0E0 solid;border-bottom:none;border-left:none;padding:2px 5px;}
+
+/*组操作页面*/
+.cardGroupCon{width:740px;margin:0 auto;margin-top:30px;}
+.cardGroup-textbox{width:40%;height:35px;margin:20px 0;}
+.cardGroup-a{display:inline-block;width:100px;margin:0px 0px 0px 40px;}
+.cardGroupTableCon{width:740px;margin:0 auto;margin-top:30px;position:relative;}
+.cardGroupTableList{width:100%;height:auto;}

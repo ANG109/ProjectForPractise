@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="WEB-INF">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/web/WEB-INF" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/web/WEB-INF" recursive="false" />
+  </library>
+</component>
